@@ -28,24 +28,21 @@
       </header>
 
       <main class="app-layout">
-        <div class="sidebar">
+        <div class="sidebar" id="country-info">
             <div class="country-selector">
               <div class="select-container">
-                <select id="country-dropdown">
+                <select id="country-dropdown" v-model="selectedCountry" @change="handleCountryChange">
                   <option value="">Select a country</option>
-                  <option value="brazil">Brazil</option>
-                  <option value="monaco">Monaco</option>
-                  <option value="kenya">Kenya</option>
-                  <option value="south-korea">South Korea</option>
-                  <option value="norway">Norway</option>
-                  <option value="portugal">Portugal</option>
-                  <option value="canada">Canada</option>
+                  <option v-for="country in countries" :key="country.id" :value="country.value">
+                    {{ country.name }}
+                  </option>
                 </select>
                 <div class="select-arrow"></div>
               </div>
             </div>
+          
             <div class="cities-list" id="cities-container">
-              <!--Cities in here with vue-->
+              <!--Cities will be rendered here with JS-->
             </div>
           </div>
 
