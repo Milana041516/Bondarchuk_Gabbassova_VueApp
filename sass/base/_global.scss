@@ -1,0 +1,29 @@
+@use '../abstracts' as a;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: a.$font-family;
+    background-color: a.$light-background;
+    color: a.$text-color;
+    line-height: 1.6;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+  }
+  
