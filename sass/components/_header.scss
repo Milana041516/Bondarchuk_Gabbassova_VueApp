@@ -1,0 +1,36 @@
+@use '../abstracts' as a;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: a.$primary-color;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-toggle span {
+    height: 2px;
+    width: 24px;
+    background-color: a.$text-color;
+    transition: a.$transition;
+  }
+

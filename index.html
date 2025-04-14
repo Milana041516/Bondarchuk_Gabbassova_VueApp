@@ -10,6 +10,124 @@
     <script type="module" src="js/main.js"></script>
 </head>
 <body>
+    <div class="container">
+    <header>
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <h1>TravelPlanner</h1>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <main class="app-layout">
+        <div class="sidebar">
+            <div class="country-selector">
+              <div class="select-container">
+                <select id="country-dropdown">
+                  <option value="">Select a country</option>
+                  <option value="brazil">Brazil</option>
+                  <option value="monaco">Monaco</option>
+                  <option value="kenya">Kenya</option>
+                  <option value="south-korea">South Korea</option>
+                  <option value="norway">Norway</option>
+                  <option value="portugal">Portugal</option>
+                  <option value="canada">Canada</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            <div class="cities-list" id="cities-container">
+              <!--Cities in here with vue-->
+            </div>
+          </div>
+
+          <section class="main-content">
+            <h2 class="drag-drop-title">Drag and drop</h2>
+            
+            <div class="content-grid">
+              <!-- Drop zone -->
+              <div class="drop-zone" id="city-drop-zone">
+                <div class="placeholder">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <p>Drag & drop a city here to plan your trip</p>
+                </div>
+                <div class="dropped-city-info" id="dropped-city-info">
+                  <!-- City info will be in here-->
+                </div>
+              </div>
     
+              <!-- Calendar in heeeeere-->
+              <div class="calendar-container">
+                <div class="calendar-header">
+                  <button id="prev-month" class="calendar-nav-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                  </button>
+                  <h3 id="current-month">January 2024</h3>
+                  <button id="next-month" class="calendar-nav-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="calendar-grid">
+                  <div class="weekday">SUN</div>
+                  <div class="weekday">MON</div>
+                  <div class="weekday">TUE</div>
+                  <div class="weekday">WED</div>
+                  <div class="weekday">THU</div>
+                  <div class="weekday">FRI</div>
+                  <div class="weekday">SAT</div>
+                  <div id="calendar-days" class="calendar-days">
+                    <!-- Calendar days are in here -->
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Weather -->
+              <div class="weather-widget" id="weather-widget">
+                <!-- Weather info is in hrer -->
+              </div>
+    
+              <!-- Activities in here-->
+              <div class="activities-panel">
+                <h3>Activities</h3>
+                <div id="activities-list" class="activities-list">
+                  <!-- Activities from vue-api -->
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
+
+      <div class="modal" id="booking-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Confirm Booking</h3>
+            <button class="close-btn" id="close-modal">x</button>
+          </div>
+          <div class="modal-body" id="modal-body">
+            <!-- Booking details in here-->
+          </div>
+          <div class="modal-footer">
+            <button class="btn secondary-btn" id="cancel-booking">Cancel</button>
+            <button class="btn primary-btn" id="confirm-booking">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
 </body>
 </html>
