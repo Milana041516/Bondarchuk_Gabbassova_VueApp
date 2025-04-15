@@ -1,3 +1,3 @@
-import { countriesVue } from "./modules/countries.js";
+import { countriesVue } from "./modules/countries-cities.js";
 
 countriesVue();
